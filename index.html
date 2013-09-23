@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Website short description." />
+<meta name="keywords" content="website main keywords" />
+	<title>CS 526 CG II Proj 1</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header"><h1>CS 526 CG II Proj 1</h1></div>
+
+<div id="sub_header">Jie Jiang</div>
+
+<div id="main_content_top"></div>
+
+<div id="main_content">
+
+<div class="content">
+<h2>X-guy</h2>
+<p></p>
+<p></p>
+<p class="quote">The X-guy, who fights a never ending battle for truth and justice, and always takes the CTA instead of flying or driving in the city. </p>
+<p>This application is basically a interactive map of Chicago, where you can fly around and check crime and traffic information within it. </p>
+<p>This map tracks the real-time Chicago L lines train tracking information. So any train showing on the map should be the actual location they are at right now. The map also visualized past Chicago crime records that pre-downloaded from City of Chicago Data Center. You can filter certain those records to get a more brief view or you can aggregate all data on the map for an overview. I also used some past crime records to simulate a real-time crime monitor system. So our virtual hero can find somewhere to go instead of hanging around the city with his skin tight jeans.</p>
+<h2>Credits</h2>
+<p>1. Real-time CTA-L-line train tracking information comes directly from CTA with their developers' API</p>
+<p>From their API, a developer can get a xml file with detailed information regarding all active trains on a specific line. I use their train id to track each train and update its position every 20 seconds. I attached the train id with the train in the map, in order to give a sense motion for the observers.</p>
+<p>2. Community names and boundaries, crime records, CTA-L-line route and stations information come from Chicago Data Portal.</p>
+<p>For communities' boundaries and names, I extract the information by parsing a xml file, connects all points along the edge of each community and put its name in the middle. The only issue with this is, some points on the edge stays too close and the omegalib seems to complain a lot about it.(not necessarily identical, even when they're just close together.) So I did set a threshold to eliminate this problem. And actually it makes the line looks better since it kinda smooth it out. </p>
+<p>For crime records, I built a MySQL database and loaded filterred records into my laptop. And I can access the data through a mysql connector for python. This approach did save some start up time for me, but I have to handle with the lag from communication. That would be talked in details later.</p>
+</div>
+
+<div class="menu">
+<div class="menu_title">Main menu</div>
+<ul>
+<li><a href="#" class="menu_link">About me</a></li>
+<li><a href="#" class="menu_link">Contact me</a></li>
+</ul>
+<div class="menu_title">Sub menu</div>
+<ul>
+<li><a href="http://www.pikanai.com" class="menu_link">Pikanai</a></li>
+</ul>
+<div class="menu_title">Friends</div>
+<ul>
+<li><a href="http://www.oswd.org" class="menu_link">OSWD</a></li>
+<li><a href="http://www.opendesigns.org" class="menu_link">Open Designs</a></li>
+</ul>
+</div>
+
+<div id="clear"></div>
+
+</div>
+
+<div id="main_content_bottom">
+</div>
+
+<div id="footer"><strong>Copyright &copy; 2007</strong> | <a href="#">Your Site</a> | <b>Design by</b> <a href="http://www.pikanai.com">Pikanai.com</a></div>
+
+</div>
+
+</body>
+
+</html>
