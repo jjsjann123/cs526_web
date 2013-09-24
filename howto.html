@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="description" content="Website short description." />
+<meta name="keywords" content="website main keywords" />
+	<title>CS 526 CG II Proj 1</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div id="container">
+
+<div id="header"><h1>CS 526 CG II Proj 1</h1></div>
+
+<div id="sub_header">Jie Jiang</div>
+
+<div id="main_content_top"></div>
+
+<div id="main_content">
+
+<div class="content">
+<h2>Installation</h2>
+<p></p>
+<p></p>
+<p>The script for this application is only the testTrain.py under ./app/. You can run it through orun -s YOURDIR/app/testTrain.py</p>
+<p>However, there are couple files used along with it.</p>
+<p>1. You need the two ./app/chicago_yahoo(_sat).earth for yahoo's map API. </p>
+<p>2. You need the ./app/utm and ./app/utm-0.3.0 for coordinates transformation.</p>
+<p>3. You need all files under ./app/Data to build the whole city with two exceptions: i. You don't need ./app/Data/Sky or ./app/Data/Skybox. Sorry I'm just being too lazy to delete it; ii. You don't need most files in ./app/Data/crime/ except the communityCode.csv. Since all data are pre-loaded into the database, but you might want to use those files to initialize your database and put some data in there.</p>
+<h2>Usage</h2>
+<h3>Navigation</h3>
+<p>I disabled the built-in camera control. But the one I put in there is similar to the original. I just changed the rotation a little bit. Now the camera cannot rotate along its local y-axis, instead you can only do x-axis and z-axis. Note: You can also use keyboard if you really want to controls are (wasd)(rf)(ijkl)</p>
+<h3>Menu</h3>
+<p>Right click to open the menu. In side the menu you can quick jump to the overview of the scene by clicking overview, or go to different communities by clicking community and pick you destination in the popup menu</p>
+<p>You can switch between different map layers by clicking the map. And there will be a set of radio button for you to choose from "road map", "satellite" or "none".</p>
+<p>Clicking the option, you can control what's updateing in the map. Including trains tracking, crime displaying and communities displaying.</p>
+<p>Crime filtering gives you the freedom to choose the updated crime information. In this application, the database loading and displaying can be at different phase. Even the user choose not to display the crime data. The system is still trying to load it. And user can choose which data to be pre-loaded (or not load at all). You can combine the filter condition with its year or type</p>
+<p>The real time crime simulation uses the past data to pretend a real time situation. Because of the sparsity of the crime records within the time slot. I build a display panel on the top left to tell the user about the information of ongoing crime. So they can use the quick jump to go to the district and easier to observe crimes.</p>
+</div>
+
+<div class="menu">
+<div class="menu_title">All about the project</div>
+<ul>
+<li><a href="#" class="menu_link">Introduction</a></li>
+<li><a href="#" class="./howto.html">How_to</a></li>
+</ul>
+<div class="menu_title">Resources</div>
+<ul>
+<li><a href="https://github.com/jjsjann123/CS526_cave" class="menu_link">github_source</a></li>
+<li><a href="./index2.html" class="menu_link">fun stuff</a></li>
+</ul>
+<div class="menu_title">I have no friends, still me</div>
+<ul>
+<li><a href="http://www.flickr.com/photos/alex_jann_2012/" class="menu_link">flickr</a></li>
+<li><a href="https://www.facebook.com/jie.jiang.10888" class="menu_link">facebook</a></li>
+</ul>
+</div>
+
+<div id="clear"></div>
+
+</div>
+
+<div id="main_content_bottom">
+</div>
+
+<div id="footer"><strong>Copyright &copy; 2007</strong> | <a href="#">Your Site</a> | <b>Design by</b> <a href="http://www.pikanai.com">Pikanai.com</a></div>
+
+</div>
+
+</body>
+
+</html>
